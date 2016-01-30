@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Stylng</title>
+    </head>
+    <body ng-app="app" ng-controller="appController as app">
+
+        <aside>
+    		<nav>
+    			<a href="" ng-repeat="item in app.data">{{item.name}}</a>
+    		</nav>
+    	</aside>
+
+    	<section class="component" ng-repeat="item in app.data">
+    		<div class="component__details">
+    			<h2>{{item.name}}</h2>
+    			<p>{{item.description}}</p>
+    		</div>
+    		<div class="component__example">
+    			<div ng-bind-html="item.markup.example"></div>
+    		</div>
+    		<div class="component__markup">
+    			<pre>
+    				<code ng-bind-html="item.markup.escaped"></code>
+    			</pre>
+    		</div>
+    	</section>
+
+    </body>
+</html>

@@ -1,0 +1,78 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+$sidebar-width: 25%;
+$spacing: 1.5rem;
+$brand: #2ecc71;
+$brand-dark: #27ae60;
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-bottom: $spacing;
+}
+
+aside {
+	position: fixed;
+	width: $sidebar-width;
+	height: 100%;
+	overflow-y: 100%;
+	padding: $spacing;
+	background: $brand-dark;
+}
+
+section {
+	margin-left: $sidebar-width;
+}
+
+.component {
+	&__details {
+		padding: $spacing;
+		background: $brand;
+		color: #fff;
+	}
+
+	&__example {
+		padding: $spacing;
+	}
+}
+
+nav {
+	a {
+		display: block;
+		padding: 5px 0;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: .9rem;
+		font-weight: bold;
+		letter-spacing: 1px;
+		color: #fff;
+		&:hover {
+			color: red;
+		}
+	}
+}
+
+.one {
+	display: block;
+	background: $brand;
+}
+
+pre {
+	margin: 0;
+	code {
+		margin: 0;
+		display: block;
+		padding: $spacing;
+		background: #eee;
+		font-family: Monospace;
+	}
+}
